@@ -21,7 +21,7 @@ export class MembersComponent implements OnInit {
     this.membersForm = new FormGroup({
       userId : new FormControl(''),
       policyId : new FormControl(''),
-      GroutId : new FormControl(''),
+      GroupId : new FormControl(''),
       ssn : new FormControl(''),
       lastName : new FormControl(''),
       firstName : new FormControl(''),
