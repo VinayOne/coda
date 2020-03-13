@@ -10,12 +10,12 @@
                     <input class="form-control" type="text" formControlName="memberId">                    
                   </div> 
                   <div class="form-group">
-                    <button class="btn btn-success btn-lg btn-block" type="submit">Member Search</button>
+                    <button class="btn btn-info btn-lg btn-block" type="submit">Member Search</button>
                   </div>
             </form>
         </div>
         <div class="col-md-6">
-            <form>
+            <form [formGroup]="membersForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="userId">UserId :</label>
                     <input class="form-control" type="text" formControlName="userId">                    
