@@ -4,10 +4,10 @@
     </div>
     <div class="row mt-1">
         <div class="col-md-6">
-            <form>
+            <form [formGroup]="memberSearchForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                    <label for="memberId">Member's Id :</label>
-                    <input class="form-control" type="text" formControlName="memberId">                    
+                    <label for="membersId">Member's Id :</label>
+                    <input class="form-control" type="text" formControlName="membersId">                    
                   </div> 
                   <div class="form-group">
                     <button class="btn btn-info btn-lg btn-block" type="submit">Member Search</button>
@@ -15,7 +15,7 @@
             </form>
         </div>
         <div class="col-md-6">
-            <form [formGroup]="membersForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="membersForm">
                 <div class="form-group">
                     <label for="userId">UserId :</label>
                     <input class="form-control" type="text" formControlName="userId">                    
