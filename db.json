@@ -1,0 +1,11 @@
+{
+    "members": [
+    {"id": 1, "policyId": 11111, "GroupId": 12345, "ssn": 12345, "lastName": "Doe", "firstName": "John", "inNetworkDeductable": 100, "outNetworkDeductable": 200, "difference": 100 },
+    {"id": 2, "policyId": 22222, "GroupId": 12345, "ssn": 12345, "lastName": "Mitchell", "firstName": "Maria", "inNetworkDeductable": 200, "outNetworkDeductable": 300, "difference": 200 },
+    {"id": 3, "policyId": 33333, "GroupId": 12345, "ssn": 12345, "lastName": "Planck", "firstName": "Max", "inNetworkDeductable": 300, "outNetworkDeductable": 400, "difference": 300 }
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 },
+        { "id": 2, "body": "some comment", "postId": 1 }
+      ]
+}

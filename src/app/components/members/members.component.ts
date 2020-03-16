@@ -14,8 +14,8 @@ export class MembersComponent implements OnInit {
   memberSearchForm : FormGroup;
 
   jsonData: any = [
-    {'userId': 11111, 'policyId': 12345, 'GroupId': 12345, 'ssn': 12345, 'lastName': 'Doe', firstName: 'John', 'inNetworkDeductable': 100, 'outNetworkDeductable': 200, 'difference': 100 },
-    {'userId': 22222, 'policyId': 12345, 'GroupId': 12345, 'ssn': 12345, 'lastName': 'Smith', firstName: 'Jon', 'inNetworkDeductable': 200, 'outNetworkDeductable': 100, 'difference': 200 }
+    {'id': 11111, 'policyId': 12345, 'GroupId': 12345, 'ssn': 12345, 'lastName': 'Doe', firstName: 'John', 'inNetworkDeductable': 100, 'outNetworkDeductable': 200, 'difference': 100 },
+    {'id': 22222, 'policyId': 12345, 'GroupId': 12345, 'ssn': 12345, 'lastName': 'Smith', firstName: 'Jon', 'inNetworkDeductable': 200, 'outNetworkDeductable': 100, 'difference': 200 }
   ]
 
   constructor(private commonService:CommonService) { 
