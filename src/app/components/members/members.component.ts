@@ -12,12 +12,7 @@ export class MembersComponent implements OnInit {
   submitted = false;
   membersForm: FormGroup;
   memberSearchForm : FormGroup;
-
-  jsonData: any = [
-    {'id': 11111, 'policyId': 12345, 'GroupId': 12345, 'ssn': 12345, 'lastName': 'Doe', firstName: 'John', 'inNetworkDeductable': 100, 'outNetworkDeductable': 200, 'difference': 100 },
-    {'id': 22222, 'policyId': 12345, 'GroupId': 12345, 'ssn': 12345, 'lastName': 'Smith', firstName: 'Jon', 'inNetworkDeductable': 200, 'outNetworkDeductable': 100, 'difference': 200 }
-  ]
-
+  
   constructor(private commonService:CommonService) { 
     this.mainForm(); 
     this.memberSearch();
@@ -51,23 +46,22 @@ export class MembersComponent implements OnInit {
     if (!this.memberSearchForm.valid) {
       return false;
     } else {
-      //const result = this.jsonData.filter((item) => {
-      //  item.userId == this.memberSearchForm.value.membersId;
-      //})
-
-      this.membersForm.setValue({
-        userId: this.memberSearchForm.value.membersId,
-        policyId: '',
-        GroupId: '',
-        ssn: '',
-        lastName: '',
-        firstName: '',
-        inNetworkDeductable: '',
-        outNetworkDeductable: '',
-        difference: '',
+      let id = this.memberSearchForm.value.membersId;
+      this.commonService.getMember(id).subscribe(data => {
+        this.membersForm.setValue({
+          userId: data.id,
+          policyId: data.policyId,
+          GroupId: data.GroupId,
+          ssn: data.ssn,
+          lastName: data.lastName,
+          firstName: data.firstName,
+          inNetworkDeductable: data.inNetworkDeductable,
+          outNetworkDeductable: data.outNetworkDeductable,
+          difference: data.difference,
+        })
+      }, (error) => {
+        console.log(error)
       })
-       console.log(this.membersForm.value.userId);
-
     }
   }
 

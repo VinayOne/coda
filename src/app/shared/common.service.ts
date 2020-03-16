@@ -14,7 +14,7 @@ export class CommonService {
   constructor(private http: HttpClient) { }
 
   // Get Member
-  getEmployee(id): Observable<any> {
+  getMember(id): Observable<any> {
     let url = `${this.baseUri}/members/${id}`;
     return this.http.get(url, {headers: this.headers}).pipe(
       map((res: Response) => {
