@@ -1,5 +1,5 @@
 export class Reconciliation {
-    userId: number;
+    id: number;
     policyId: number;
     GroupId: number;
     ssn: number;

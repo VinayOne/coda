@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AccountsearchComponent } from './components/accountsearch/accountsearch.component';
 import { MembersComponent } from './components/members/members.component';
+import { TransactionsComponent } from './components/transactions/transactions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AccountsearchComponent,
-    MembersComponent
+    MembersComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,
